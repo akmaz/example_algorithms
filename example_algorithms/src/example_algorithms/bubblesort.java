@@ -1,31 +1,27 @@
 
 package example_algorithms;
 
-/*
- * bubblesort algorithm
- * http://www.algorytm.org
- */
-
 import java.util.Scanner;
 
 public class bubblesort {
 	
 	private static int[] sorting(int[] array) {
 		
-		boolean finished = false;
+		boolean change;
 		
-		while(!finished) {
-			finished = true;
+		do{
+			change = false;
 			
-			for(int i = array.length-1; i >= 1; i--) {
+			for(int i = array.length-1; i > 0; i--) {
 				if(array[i] < array[i-1]) {
 					int k = array[i-1];
 					array[i-1] = array[i];
 					array[i] = k;
-					finished = false;
-				}	
+					change = true;
+				}
 			}
-		}
+		} while(change);
+		
 		return array;
 	}
 	
