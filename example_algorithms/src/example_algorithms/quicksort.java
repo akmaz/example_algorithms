@@ -52,9 +52,6 @@ public class quicksort {
 	
 	
 	public static void main(String[] args) {
-		int[] array2 = new int[]{3,8,5,6,4,2,0,8,3,8,14,2,17,5,11,2,10,4,20,9};
-		//sort(array2,0,19);
-		//printing(array2);
 		
 		Scanner input = new Scanner(System.in);
 		
