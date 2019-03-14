@@ -7,22 +7,25 @@ public class bubblesort {
 	
 	private static int[] sorting(int[] array) {
 		
-		boolean change;
-		
-		do{
+		boolean change = true;
+		for(int k = 0; k < array.length && change; k++) {
+			
 			change = false;
 			
 			for(int i = array.length-1; i > 0; i--) {
 				if(array[i] < array[i-1]) {
-					int k = array[i-1];
-					array[i-1] = array[i];
-					array[i] = k;
+					swap(array,i-1,i);
 					change = true;
 				}
 			}
-		} while(change);
-		
+		}
 		return array;
+	}
+	
+	private static void swap(int[] array, int index1, int index2) {
+		int temp = array[index1];
+		array[index1] = array[index2];
+		array[index2] = temp;
 	}
 	
 	private static void printing(int[] array) {
